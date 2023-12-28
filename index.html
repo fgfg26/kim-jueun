@@ -1,69 +1,91 @@
-<!DOCTYPE html>
+        <a href="<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-   
-    <title>desimore</title>
-</head>
-<body>
-    <header>
-<h1>Desimore</h1>
-    </header>
-    <a href="about.html"><h3>about desimore</h3></a>
-    <a href="interest.html"><h3>desimore interests</h3></a>
-    <a href="favorites.html"><h3>desimore favorites</h3></a>
-    <main> 
-    </main>
-    <footer>
-made by nowh
-    </footer>
-</body> <div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://desimore.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-</html>
-<head>
-    <title>이미지 클릭 링크</title>
+    <title>이미지 및 텍스트 말풍선</title>
     <style>
         body {
+            font-family: "Pretendard Extrabold", Arial, sans-serif;
             text-align: center;
-            margin: 0;
-            padding: 0;
+            background-color: #ffffff;
+            margin: 0; /* Remove default margin */
         }
-        a {
-            display: block;
-            margin: 20px auto;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .center-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 10px;
+            border: 5px solid black;
+        }
+
+        .speech-bubbles {
+            display: flex;
+            flex-direction: column; /* Change to column for mobile layout */
+            align-items: center; /* Center speech bubbles */
+            gap: 20px;
+        }
+
+        .speech-bubble {
+            background-color: #000000;
+            border-radius: 10px;
+            color: rgb(255, 255, 255);
+            padding: 10px;
             text-align: center;
+            margin: 10px;
+            max-width: 80%;
+            position: relative; /* Add position relative */
         }
-        img {
-            width: 100px;
-            height: 100px;
+
+        .speech-bubble:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -20px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: #f0f0f0 transparent transparent transparent;
+            transform: translateX(-50%);
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
+
+            .speech-bubbles {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Allow icons to wrap to the next line on smaller screens */
+        }
+
+        .social-icons img {
+            width: 45px;
+            height: 45px;
+            margin: 5px;
         }
     </style>
 </head>
 <body>
-    <a href="https://www.instagram.com/">
-        <img src="image/instagram.png" alt="이미지 설명">
-    </a>
-</body>
-</html>
+    <div class="container">
+        <h1>안녕! 나는 최제</h1>
+
+    </div>
+    <div class="social-icons">
+        <a href="mailto:231119@ggg.hs.kr "><img src="메일.png" alt="이메일 아이콘"></a>
+        <a href="https://instagram.com/xey.cheii?igshid=N3h2eWpyNjg1anZu&utm_source=qr"><img src="인스타그램.png" alt="인스타그램 아이콘"></a>
+        <a href='tel:010 3680 1476'><img src="전화.png" alt="전화 아이콘"></a>  
+         </div>
